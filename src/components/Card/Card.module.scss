@@ -1,0 +1,61 @@
+/* playing cards ratio is 2.5:3.5 */
+
+/* SASS variable setup */
+$card-width: 260px;
+$card-height: $card-width * 3.5 / 2.5;
+$picture-width: 100px;
+$picture-height: $picture-width * 3.5 / 2.5;
+
+.card {
+  text-align: center;
+  width: $card-width;
+  height: $card-height;
+  border: 8px solid black;
+  background-size: cover;
+  border-radius: 15px;
+  background-image: url(../../static/images/card.png);
+  background-repeat: no-repeat, repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 10px;
+  padding: 5px;
+
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+
+.picture {
+  width: $picture-width;
+  height: $picture-height;
+  border: 1px solid black;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-around;
+}
+
+.description {
+  width: 55%;
+  font-size: small;
+}
+
+.skills {
+  margin: 5px auto 5px auto;
+  width: 100%;
+  border-spacing: 5px 5px;
+  td,
+  th {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 2px 15px 2px 15px;
+    text-align: right;
+  }
+  td {
+    border-top-left-radius: 25px;
+  }
+  th {
+    border-bottom-right-radius: 25px;
+  }
+}
