@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "./App.module.scss";
-import Card from "../../components/Card";
+import Cards from "../../containers/Cards";
 
 function App() {
   return (
-    <main>
+    <>
       <header className={styles.appHeader}>
         <h1>_nology Top Trumps</h1>
       </header>
-      <Card />
-    </main>
+      <main>
+        <Cards />
+      </main>
+    </>
   );
 }
 
