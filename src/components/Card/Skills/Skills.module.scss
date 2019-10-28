@@ -1,0 +1,19 @@
+.skills {
+  margin: 10px auto;
+  width: 100%;
+  border-spacing: 5px 5px;
+  td,
+  th {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 2px 15px 2px 15px;
+    text-align: right;
+  }
+  td {
+    border-top-left-radius: 25px;
+  }
+  th {
+    border-bottom-right-radius: 25px;
+  }
+}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardComponent Tests should match the snapshot 1`] = `
+exports[`Card Tests should match the snapshot 1`] = `
 <Card
   cardData={
     Object {
@@ -17,73 +17,109 @@ exports[`CardComponent Tests should match the snapshot 1`] = `
       },
     }
   }
+  selectCard={[MockFunction]}
 >
-  <article
-    className="card"
+  <div
+    className="scene"
+    onClick={[Function]}
   >
-    <h3>
-      Craig Livings
-    </h3>
-    <div
-      className="topSection"
+    <article
+      className="card "
+      onClick={[Function]}
     >
-      <section
-        className="description"
+      <div
+        className="cardFront"
       >
-        Craig is Head of Technology for _nology. He loves rock climbing and solving problems. The only problem craig hasn't been able to solve is how to climb while leaving his ego on...
-      </section>
-      <img
-        alt="Craig Livings's face"
-        className="picture"
-        src="craig.png"
+        <h3>
+          Craig Livings
+        </h3>
+        <div
+          className="topSection"
+        >
+          <section
+            className="description"
+          >
+            Craig is Head of Technology for _nology. He loves rock climbing and solving problems. The only problem craig hasn't been...
+          </section>
+          <img
+            alt="Craig Livings's face"
+            className="picture"
+            src="craig.png"
+          />
+        </div>
+        <Skills
+          skills={
+            Object {
+              "attitude": 8,
+              "greed": 3,
+              "loudness": 5,
+              "mvp": 9,
+              "sass": 7,
+            }
+          }
+        >
+          <table
+            className="skills"
+          >
+            <tbody>
+              <tr
+                key="0"
+              >
+                <th>
+                  Loudness
+                </th>
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr
+                key="1"
+              >
+                <th>
+                  Greed
+                </th>
+                <td>
+                  3
+                </td>
+              </tr>
+              <tr
+                key="2"
+              >
+                <th>
+                  Attitude
+                </th>
+                <td>
+                  8
+                </td>
+              </tr>
+              <tr
+                key="3"
+              >
+                <th>
+                  Sass
+                </th>
+                <td>
+                  7
+                </td>
+              </tr>
+              <tr
+                key="4"
+              >
+                <th>
+                  MVP
+                </th>
+                <td>
+                  9
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </Skills>
+      </div>
+      <div
+        className="cardBack"
       />
-    </div>
-    <table
-      className="skills"
-    >
-      <tbody>
-        <tr>
-          <th>
-            Loudness
-          </th>
-          <td>
-            5
-          </td>
-        </tr>
-        <tr>
-          <th>
-            Greed
-          </th>
-          <td>
-            3
-          </td>
-        </tr>
-        <tr>
-          <th>
-            Attitude
-          </th>
-          <td>
-            8
-          </td>
-        </tr>
-        <tr>
-          <th>
-            Sass
-          </th>
-          <td>
-            7
-          </td>
-        </tr>
-        <tr>
-          <th>
-            MVP
-          </th>
-          <td>
-            9
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </article>
+    </article>
+  </div>
 </Card>
 `;
