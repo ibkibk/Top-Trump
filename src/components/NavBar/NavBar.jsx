@@ -3,7 +3,7 @@ import styles from "./NavBar.module.scss";
 import { CSSTransition } from "react-transition-group";
 import "./transition.css";
 import PropTypes from "prop-types";
-import NavItem from "../NavItem";
+import NavItem from "./NavItem";
 
 class NavBar extends Component {
   render() {
@@ -16,9 +16,16 @@ class NavBar extends Component {
       >
         <nav>
           <ul className={styles.navList}>
-            <NavItem name="Cards" />
-            <NavItem name="Trainers" />
-            <NavItem name="Students" />
+            <NavItem
+              toggleMenu={this.props.toggleMenu}
+              route="/cards"
+              name="Cards"
+            />
+            <NavItem
+              toggleMenu={this.props.toggleMenu}
+              route="/login"
+              name="Login"
+            />
           </ul>
         </nav>
       </CSSTransition>
@@ -27,7 +34,8 @@ class NavBar extends Component {
 }
 
 NavBar.propTypes = {
-  menuOpen: PropTypes.bool.isRequired
+  menuOpen: PropTypes.bool.isRequired,
+  toggleMenu: PropTypes.func.isRequired
 };
 
 export default NavBar;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styles from "./App.module.scss";
 import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
-import Cards from "../../containers/Cards";
+import Routes from "../../routes/Routes";
 
 class App extends Component {
   // value for menuOpen is passed as props to NavBar component
@@ -28,10 +28,14 @@ class App extends Component {
       <div className={styles.app}>
         <div className={styles.headerContainer}>
           <Header toggleMenu={this.toggleMenu} />
-          <NavBar menuOpen={this.state.menuOpen} />
+          <NavBar toggleMenu={this.toggleMenu} menuOpen={this.state.menuOpen} />
         </div>
         <main>
-          <Cards closeMenu={this.closeMenu} />
+          <Routes
+            user={this.state.user}
+            signIn={this.signIn}
+            signOut={this.signOut}
+          />
         </main>
       </div>
     );
