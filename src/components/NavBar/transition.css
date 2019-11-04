@@ -1,0 +1,20 @@
+.navShown-enter {
+  overflow: hidden;
+  max-height: 0px;
+}
+
+.navShown-enter-active {
+  max-height: 200px;
+  overflow: hidden;
+  transition: all 300ms ease-out;
+}
+
+.navShown-exit {
+  max-height: 200px;
+}
+
+.navShown-exit-active {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 300ms ease-out;
+}

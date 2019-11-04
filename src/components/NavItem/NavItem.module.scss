@@ -1,0 +1,14 @@
+.navItem {
+  border-bottom: 2px solid transparent;
+  width: max-content;
+  font-size: 1.5em;
+  padding: 0.25em 0;
+  // margin: 0.5em 0;
+  list-style-type: none;
+}
+
+.navItem:hover {
+  cursor: pointer;
+  color: #fe8800;
+  border-color: black;
+}
