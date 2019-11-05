@@ -1,44 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Cards Tests should match the snapshot 1`] = `
-<section
-  className="cards"
+<Cards
+  closeMenu={[MockFunction]}
 >
-  <Card
-    cardData={
-      Object {
-        "description": "Craig is Head of Technology for _nology. He loves rock climbing and solving problems. The only problem craig hasn't been able to solve is how to climb while leaving his ego on the ground.",
-        "name": "Craig Livings",
-        "picture": "craig.png",
-        "role": "Trainer",
-        "skills": Object {
-          "attitude": 8,
-          "greed": 3,
-          "loudness": 5,
-          "mvp": 9,
-          "sass": 7,
-        },
-      }
-    }
-    key="0"
+  <SearchBar
+    searchText=""
+    setSearchText={[Function]}
+  >
+    <input
+      className="searchBar"
+      onChange={[Function]}
+      placeholder="Search cards..."
+      type="text"
+      value=""
+    />
+  </SearchBar>
+  <section
+    className="cards"
   />
-  <Card
-    cardData={
-      Object {
-        "description": "Liam is one of our great modern thinkers. He's always offering an opinion whether it is asked for or not. Ask Liam any question and he will give you any answer.",
-        "name": "Liam Farrell",
-        "picture": "liam.png",
-        "role": "Trainer",
-        "skills": Object {
-          "attitude": 5,
-          "greed": 7,
-          "loudness": 7,
-          "mvp": 9,
-          "sass": 5,
-        },
-      }
-    }
-    key="1"
-  />
-</section>
+</Cards>
 `;

@@ -1,17 +1,22 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import Cards from "./Cards";
 import data from "../../static/data/data";
 import Card from "../../components/Card";
 
 describe("Cards Tests", () => {
   let component;
+  let testFunction;
 
   beforeEach(() => {
-    component = shallow(<Cards />);
+    testFunction = jest.fn();
+    component = mount(<Cards closeMenu={testFunction} />);
   });
 
-  it("should render one instance of card component for each object of card data", () => {
+  it("should render one instance of card component for each object of card data in component state", () => {
+    component.setState({
+      filteredList: data
+    });
     const numberCardsRendered = component.find(Card).length;
     const numberDataObjects = data.length;
 
