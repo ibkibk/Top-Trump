@@ -18,7 +18,16 @@ const firebaseConfig = {
 // Initialising firebase
 firebase.initializeApp(firebaseConfig);
 
+// Exporting connection to provider for google signin
+export const provider = new firebase.auth.GoogleAuthProvider();
+
 // Exporting connection to database as a variable
 export const firestore = firebase.firestore();
+
+firestore.enablePersistence().catch(function(err) {
+  console.log("Failed firestore offline cache: " + err.code);
+});
+
+export const storage = firebase.storage();
 
 export default firebase;
