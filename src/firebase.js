@@ -24,10 +24,6 @@ export const provider = new firebase.auth.GoogleAuthProvider();
 // Exporting connection to database as a variable
 export const firestore = firebase.firestore();
 
-firestore.enablePersistence().catch(function(err) {
-  console.log("Failed firestore offline cache: " + err.code);
-});
-
 export const storage = firebase.storage();
 
 export default firebase;

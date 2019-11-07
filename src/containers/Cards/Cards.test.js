@@ -10,7 +10,7 @@ describe("Cards Tests", () => {
 
   beforeEach(() => {
     testFunction = jest.fn();
-    component = mount(<Cards closeMenu={testFunction} />);
+    component = mount(<Cards closeMenu={testFunction} />, { disableLifecycleMethods: true });
   });
 
   it("should render one instance of card component for each object of card data in component state", () => {

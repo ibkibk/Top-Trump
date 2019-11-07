@@ -8,24 +8,12 @@ import NavItem from "./NavItem";
 class NavBar extends Component {
   render() {
     return (
-      <CSSTransition
-        in={this.props.menuOpen}
-        timeout={400}
-        classNames="navShown"
-        unmountOnExit
-      >
+      <CSSTransition in={this.props.menuOpen} timeout={400} classNames="navShown" unmountOnExit>
         <nav>
           <ul className={styles.navList}>
-            <NavItem
-              toggleMenu={this.props.toggleMenu}
-              route="/cards"
-              name="Cards"
-            />
-            <NavItem
-              toggleMenu={this.props.toggleMenu}
-              route="/login"
-              name="Login"
-            />
+            <NavItem toggleMenu={this.props.toggleMenu} route="/cards" name="Cards" />
+            <NavItem toggleMenu={this.props.toggleMenu} route="/private/mycards" name="My Cards" />
+            <NavItem toggleMenu={this.props.toggleMenu} route="/login" name="Login" />
           </ul>
         </nav>
       </CSSTransition>
